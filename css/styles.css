@@ -1,0 +1,56 @@
+body{
+	background-color: #800000;
+}
+
+.toma{
+	display: inline-block;
+	clear: both;
+}
+
+.hidden{
+	visibility: hidden
+}
+
+#feedBtn {
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #25c2a8;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  clear: both;
+}
+
+#sleepBtn {
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #25c2a8;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  clear: both;
+}
+
+
+/*#container{
+	display: flex;
+	justify-content: center;
+}
+#container2{
+	display: flex;*/
+
+
+h2{
+	font-family: 'Futura Bold', sans-serif;
+	color: white;
+}
+
+/*#btnContainer{
+	align-items: center;
+}*/
