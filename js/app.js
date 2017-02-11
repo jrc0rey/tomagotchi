@@ -15,12 +15,18 @@ var tomagotchi = {
   isSleeping: false,
   currentForm: "Baby",
   life: true,
-  
   eat: function(){
-    this.hunger -= 3;
+    this.hunger -= 2;
+    if(this.hunger <= 0){
+        this.hunger = 0
+      }
     this.happiness += 1;
+    if(this.happiness >= 11){
+      this.happiness = 10
+    }
     hungerMeter.innerHTML = 'Hunger Meter:' + tomagotchi.hunger;
     happinessMeter.innerHTML = 'Happiness Meter:' + tomagotchi.happiness;
+      
   },
   checkMorph: function(){
     if(this.age === 0){
@@ -36,11 +42,23 @@ var tomagotchi = {
     age.innerHTML = 'Age:' + tomagotchi.age
   },
   checkDeathByAging: function(){
-    if(this.age > 10){
+    if(this.age >= 20){
       this.die();
+      this.age = 20;
     }
   },
   die: function(){
+    function myStopFunction() {
+    clearInterval(animate);
+    var divThree = document.getElementById('3')
+    divThree.classList.add('hidden')
+    var died = document.getElementById('over')
+    died.classList.remove('death')
+    feed.disabled = true;
+    sleep.disabled = true;
+}
+myStopFunction();
+    
     this.life = false;
     console.log("RIP " + this.name + " is Dead");
   }
@@ -51,11 +69,11 @@ var sleep = document.getElementById('sleepBtn')
 var hungerMeter = document.getElementsByTagName('h2')[0]
 var happinessMeter = document.getElementsByTagName('h2')[1]
 var age = document.getElementsByTagName('h2')[2]
-var backgroundNight = document.getElementById('background');
+var counter = 0
 
 
 //Aging Interval
-setInterval(function(){ tomagotchi.gainAge() }, 20000);
+setInterval(function(){ tomagotchi.gainAge() }, 3000);
 
 //Eat Button
 feed.addEventListener('click', function(e){
@@ -63,12 +81,14 @@ feed.addEventListener('click', function(e){
 })
 
 //Sleep Button
-var counter = 0;
 sleep.addEventListener('click', function(e){
     counter++
-    if(counter % 3 ===0){
-    tomagotchi.isSleeping = true;
-    tomagotchi.background 
+    var body = document.getElementsByTagName('body')[0];    
+    if(counter % 2 === 1){
+    body.classList.add('body2')
+    }
+    else {
+      body.classList.remove('body2')
     }
       
 })
@@ -76,7 +96,7 @@ sleep.addEventListener('click', function(e){
 
 //Animation
 var i = 1
-setInterval(function(){
+var animate = setInterval(function(){
   var divOneHide = document.getElementById(i);
   if(i % 3 === 0){
     i = 1
@@ -87,7 +107,7 @@ setInterval(function(){
   var divTwo = document.getElementById(i);
   divOneHide.classList.add('hidden');
   divTwo.classList.remove('hidden');
- 
+
 }, 1000)
 
 

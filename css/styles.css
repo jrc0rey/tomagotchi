@@ -1,56 +1,102 @@
 body{
-	background-color: #800000;
+	background: radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
 }
 
-.toma{
-	display: inline-block;
-	clear: both;
+.body2{
+	background: rgba(0,0,0,1);
+}
+
+#container{
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+#container2{
+	display: flex;
+	justify-content: space-around;
+}
+
+#myButtons{
+	display: flex;
+	justify-content: center;
+}
+
+#sleepBtn{
+	margin-left: 20px;
 }
 
 .hidden{
 	visibility: hidden
 }
 
-#feedBtn {
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
-  border-radius: 20px;
+#feedBtn{
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 15px;
-  background: #25c2a8;
-  padding: 10px 20px 10px 20px;
+  font-size: 11px;
+  background: #FD4D4D;
+  padding: 7px 16px 7px 16px;
   text-decoration: none;
-  clear: both;
+}
+
+#feedBtn:hover {
+  text-decoration: none;
 }
 
 #sleepBtn {
-  -webkit-border-radius: 20;
-  -moz-border-radius: 20;
-  border-radius: 20px;
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 15px;
-  background: #25c2a8;
-  padding: 10px 20px 10px 20px;
+  font-size: 11px;
+  background: #FD4D4D;
+  padding: 7px 16px 7px 16px;
   text-decoration: none;
-  clear: both;
 }
 
-
-/*#container{
-	display: flex;
-	justify-content: center;
+#sleepBtn:hover {
+  text-decoration: none;
 }
-#container2{
-	display: flex;*/
 
 
 h2{
 	font-family: 'Futura Bold', sans-serif;
 	color: white;
+	font-size: 20px;
 }
 
-/*#btnContainer{
-	align-items: center;
-}*/
+#over{
+	position: absolute
+
+}
+
+.death{
+	visibility: hidden
+}
+
+
+
+h1{
+
+	color: white;
+	font-family: 'Futura Bold', sans-serif;
+	font-size: 100px;
+	margin-top: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
